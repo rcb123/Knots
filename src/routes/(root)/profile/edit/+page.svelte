@@ -10,16 +10,23 @@
 
 	const { user } = data;
 
-	$: $form.image = user?.profile_image ? user.profile_image : '';
-	$: $form.name = user?.name ? user.name : '';
-	$: $form.username = user?.username ? user.username : '';
-	$: $form.bio = user?.bio ? user.bio : '';
-
 	const { form, enhance, errors, constraints, delayed } = superForm(data.form, {
 		customValidity: false,
 		validators: schema,
 		multipleSubmits: 'prevent'
 	});
+
+	form.update(
+		($form) => {
+			$form.image = user?.profile_image ? user.profile_image : '';
+			$form.name = user?.name ? user.name : '';
+			$form.username = user?.username ? user.username : '';
+			$form.bio = user?.bio ? user.bio : '';
+			return $form;
+		},
+		{ taint: false }
+	);
+
 	let btnTitle: string = 'Continue';
 </script>
 
