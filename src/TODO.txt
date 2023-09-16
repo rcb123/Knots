@@ -1,1 +1,0 @@
-Add service worker (cache): https://kit.svelte.dev/docs/service-workers
