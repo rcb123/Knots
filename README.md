@@ -1,36 +1,45 @@
-# create-svelte
+# Full-Stack Social Media Platform
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A modern social media platform designed from the ground up to be scalable, responsive, and user-friendly. Utilizing cutting-edge technologies like SvelteKit, Supabase, TypeScript, Tailwind, and Zod.
 
-## Creating a project
+<!-- ![Project Screenshot](path/to/screenshot.png) -->
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
+- **Real-time Interactions**: Integrated with Supabase for real-time data syncing and interactions.
+- **Type Safety**: Leveraged TypeScript for robustness and type safety throughout the application.
+- **Modern UI/UX**: Crafted with Tailwind CSS for a responsive and modern design.
+- **Form Validation**: Zod ensures that all user inputs are validated and safe.
+- **Server-side Rendering**: Using SvelteKit for better SEO and faster initial page loads.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- Supabase Account
+
+### Installation
+
+1. Clone the repo
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone https://github.com/rcb123/Knots.git
 ```
 
-## Developing
+2. Install NPM packages
+```bash
+npm install
+```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+3. Setup your `.env` with necessary Supabase configurations.
 
+4. Start the development server:
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
+### Future Improvements
+- **Rich Social Features**: Introduce additional social elements like stories, direct messaging, and group chats to engage users further.
+- **Enhanced Analytics**: Dive deeper into user posts and interactions with robust analytics tools and dashboards.
+- **Advanced Search Capabilities**: Provide users with more powerful search options, including filters, tags, and location-based searching.
+- **Service Worker Integration**: Boost performance and allow for offline functionality by adding a Service Worker, taking full advantage of Progressive Web App (PWA) capabilities.
+- **Dynamic Theming**: Implement automatic light and dark mode based on system preferences, providing an enhanced user experience irrespective of their environment or time of day.
