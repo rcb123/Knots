@@ -34,17 +34,19 @@
 		created_at: string;
 		created_by: string; // Foreign Key referencing User
 		knots: string[] | null; // Foreign Key referencing knot
-		members: {
-			id: string; // Required field, Primary Key
-			username: string; // Required field, Unique field
-			name: string; // Required field
-			profile_image: string | null;
-			bio: string | null;
-			knots: string[] | null; // Foreign Key referencing knot
-			communities: string[] | null; // Foreign Key referencing Community
-			created_at: string;
-			updated_at: string;
-		}[] | null; // Foreign Key referencing User
+		members:
+			| {
+					id: string; // Required field, Primary Key
+					username: string; // Required field, Unique field
+					name: string; // Required field
+					profile_image: string | null;
+					bio: string | null;
+					knots: string[] | null; // Foreign Key referencing knot
+					communities: string[] | null; // Foreign Key referencing Community
+					created_at: string;
+					updated_at: string;
+			  }[]
+			| null; // Foreign Key referencing User
 	};
 </script>
 

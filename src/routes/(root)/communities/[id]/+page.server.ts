@@ -10,10 +10,7 @@ export const load: PageServerLoad = async ({ params, locals: { supabase, getSess
 		throw redirect(302, '/');
 	}
 
-	const { community: communityDetails } = await fetchCommunityDetails(
-		supabase,
-		params.id
-	);
+	const { community: communityDetails } = await fetchCommunityDetails(supabase, params.id);
 	const { knots: communityKnots }: { knots: Knot[] } = await fetchCommunityKnots(
 		supabase,
 		params.id

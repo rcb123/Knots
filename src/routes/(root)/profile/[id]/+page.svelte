@@ -13,12 +13,11 @@
 
 	// These reactivity statements are necessary to force updating of load function data
 	// Without it, profile page data won't update when navigating between profile pages
-	$: supabase = data.supabase
+	$: supabase = data.supabase;
 	$: user = data.user;
 	$: account = data.account;
 	$: userKnots = data.userKnots;
 	$: pathname = data.pathname;
-
 
 	onMount(async () => {
 		if (!userKnots) {

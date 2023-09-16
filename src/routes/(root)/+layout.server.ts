@@ -17,6 +17,6 @@ export const load: LayoutServerLoad = async ({ parent, url, locals: { supabase }
 	});
 
 	const suggestedCommunities = await fetchCommunities(supabase, { pageSize: 4 });
-	
+
 	return { session, pathname, similarMinds, suggestedCommunities };
 };

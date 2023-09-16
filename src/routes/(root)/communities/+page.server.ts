@@ -11,6 +11,6 @@ export const load: PageServerLoad = async ({ url, locals: { supabase } }) => {
 		pageNumber,
 		pageSize
 	});
-	const communities = suggestedCommunities
+	const communities = suggestedCommunities;
 	return { communities, isNext, pageNumber };
 };

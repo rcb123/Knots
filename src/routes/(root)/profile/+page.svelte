@@ -1,0 +1,1 @@
+<!-- This is only here for the redirect functionality -->

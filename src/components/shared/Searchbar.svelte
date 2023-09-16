@@ -8,7 +8,7 @@
 	let search: string;
 	let timeout: NodeJS.Timeout;
 
-	$: console.log(base)
+	$: console.log(base);
 
 	// query after 0.3s of no input
 	const debounceSearch = () => {

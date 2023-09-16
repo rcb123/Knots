@@ -21,7 +21,7 @@ export type CommunityMember = {
 	user_id: string; // Foreign Key referencing User
 };
 
-export type Communityknot = {
+export type CommunityKnot = {
 	community_id: string; // Foreign Key referencing Community
 	knot_id: string; // Foreign Key referencing knot
 };

@@ -31,7 +31,9 @@
 <Topbar {session} {signOut} {loading} />
 <main class="flex flex-row">
 	<LeftSidebar {session} {sidebarLinks} {signOut} {pathname} {loading} />
-	<section class="flex min-h-screen flex-1 flex-col items-center bg-dark-1 px-6 pb-10 pt-28 max-md:pb-32 sm:px-10">
+	<section
+		class="flex min-h-screen flex-1 flex-col items-center bg-dark-1 px-6 pb-10 pt-28 max-md:pb-32 sm:px-10"
+	>
 		<div class="w-full max-w-4xl"><slot /></div>
 	</section>
 	<RightSidebar {similarMinds} {suggestedCommunities} />

@@ -11,7 +11,7 @@ const schema = z.object({
 export const load: PageServerLoad = async ({ params, locals: { supabase } }) => {
 	const form = await superValidate(schema);
 	const knot = await fetchKnotById(supabase, params.id);
-	const commentIds = await fetchAllChildKnotIds(supabase, params.id)
+	const commentIds = await fetchAllChildKnotIds(supabase, params.id);
 	return { knot, commentIds, form };
 };
 

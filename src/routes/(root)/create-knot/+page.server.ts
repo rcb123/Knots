@@ -25,7 +25,7 @@ export const actions = {
 			supabase,
 			text,
 			session?.user.id,
-			null, // TODO: Finish implementing community functionality
+			null // TODO: Finish implementing community functionality
 		);
 		// TODO: Do invalidate(path); on client side, won't work on server
 		throw redirect(302, '/');

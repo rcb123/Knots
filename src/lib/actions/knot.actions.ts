@@ -44,7 +44,7 @@ export async function createKnot(
 	supabase: SupabaseClient<Database, 'public'>,
 	text: string,
 	author: string,
-	communityId: string | null = null,
+	communityId: string | null = null
 ) {
 	try {
 		const insertData: { text: string; author: string; community?: string | null } = {

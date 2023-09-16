@@ -14,7 +14,9 @@
 		</p>
 		<div class="flex flex-row justify-evenly py-4">
 			<a href="/">
-				<button on:click={() => goto('/')} class="btn btn-primary text-white normal-case">Return to Homepage</button>
+				<button on:click={() => goto('/')} class="btn btn-primary text-white normal-case"
+					>Return to Homepage</button
+				>
 			</a>
 			<!-- TODO: Bug reporting page -->
 			<!-- <a href="/report">

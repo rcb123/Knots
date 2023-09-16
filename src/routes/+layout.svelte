@@ -10,11 +10,13 @@
 	$: ({ supabase, session } = data);
 
 	onMount(() => {
-		const { data } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, _session: Session | null) => {
-			if (_session?.expires_at !== session?.expires_at) {
-				invalidate('supabase:auth');
+		const { data } = supabase.auth.onAuthStateChange(
+			(event: AuthChangeEvent, _session: Session | null) => {
+				if (_session?.expires_at !== session?.expires_at) {
+					invalidate('supabase:auth');
+				}
 			}
-		});
+		);
 
 		return () => data.subscription.unsubscribe();
 	});
