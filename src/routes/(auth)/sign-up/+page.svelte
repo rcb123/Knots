@@ -20,6 +20,9 @@
 <div class="lg:container mx-auto pt-[5%] h-[90vh] w-full p-8">
 	<form method="POST" class="flex flex-col items-center w-full justify-center" use:enhance>
 		<h1 class="text-heading2-semibold my-2">Sign Up</h1>
+		<p>
+			Already have an account? <a href="/login" class="link font-bold!important underline">Login here.</a>
+		</p>
 		<div class="form-control w-full max-w-xs">
 			<label for="email" class="label">
 				<span class="label-text font-semibold">Email</span>

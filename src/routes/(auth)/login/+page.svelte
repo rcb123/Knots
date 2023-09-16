@@ -21,7 +21,7 @@
 	<form method="POST" class="flex flex-col items-center w-full justify-center" use:enhance>
 		<h1 class="text-heading2-semibold my-2">Login</h1>
 		<p>
-			Don't have an account? <a href="/sign-up" class="link font-bold!important">Sign up here.</a>
+			Don't have an account? <a href="/sign-up" class="link font-bold!important underline">Sign up here.</a>
 		</p>
 		<div class="form-control w-full max-w-xs">
 			<label for="email" class="label">
