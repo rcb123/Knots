@@ -36,6 +36,7 @@ export async function createCommunity(
 	}
 }
 
+// Fetches the details of a community
 export async function fetchCommunityDetails(
 	supabase: SupabaseClient<Database, 'public'>,
 	id: string
@@ -65,7 +66,7 @@ export async function fetchCommunityKnots(
 	try {
 		// Fetch all knots from a specific community
 		const { data: knots, error } = await supabase.from('knots').select('*').eq('community', id);
-
+		
 		if (error) {
 			throw error;
 		}
@@ -93,16 +94,17 @@ export async function fetchCommunities(
 ) {
 	// Fetch all communities
 	try {
-		// Calculate the number of communities to skip based on the page number and page size.
+		// Calculate the number of records to skip based on the page number and page size
 		const skipAmount = (pageNumber - 1) * pageSize;
-
+		// Create a query to fetch all communities from the database and count the total number of communities
 		let query = supabase.from('communities').select('*', { count: 'estimated' });
 
 		if (searchString.trim() !== '') {
-			// If there is a search string, use it
+			// If a search string is provided, filter the results by the search string
 			query = query.or(`username.ilike.${searchString},name.ilike.${searchString}`);
 		}
 
+		// Order the results by created_at, descending by default
 		query = query
 			.order('created_at', { ascending: sortBy === 'asc' })
 			.range(skipAmount, skipAmount + pageSize - 1);
@@ -116,6 +118,7 @@ export async function fetchCommunities(
 			throw error;
 		}
 
+		// Calculate whether there are more communities to fetch
 		const isNext = count > pageNumber * pageSize;
 
 		if (suggestedCommunities === null) {
@@ -135,7 +138,7 @@ export async function addUserToCommunity(
 	communityId: string
 ) {
 	try {
-		// Check if the user is already a member of the community
+		// Check if the user has a membership record for the community
 		const { data: existingMembership, error: membershipError } = await supabase
 			.from('community_membership')
 			.select('id')
@@ -217,7 +220,7 @@ export async function updateCommunityInfo(
 	}
 }
 
-// Cascade on delete, so entries in join table will be deleted as well
+// Database is setup to cascade on delete, so deleting a community will delete all related entries in the join table
 export async function deleteCommunity(
 	supabase: SupabaseClient<Database, 'public'>,
 	communityId: string
