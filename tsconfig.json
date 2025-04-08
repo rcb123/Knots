@@ -17,8 +17,8 @@
 			"$db/*": ["./src/db/*"],
 			"$static/*": ["/*"],
 			"$services/*": ["./src/services/*"],
-			"$lib":["./src/lib"],
-  			"$lib/*":["./src/lib/*"],
+			"$lib": ["./src/lib"],
+			"$lib/*": ["./src/lib/*"]
 		}
 	}
 }

@@ -15,7 +15,8 @@
 		"test:unit": "vitest"
 	},
 	"devDependencies": {
-		"@melt-ui/pp": "^0.1.2",
+		"@melt-ui/pp": "^0.1.4",
+		"@melt-ui/svelte": "^0.86.6",
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
@@ -42,7 +43,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@melt-ui/svelte": "^0.39.4",
 		"@supabase/auth-helpers-sveltekit": "^0.10.2",
 		"@supabase/auth-ui-shared": "^0.1.6",
 		"@supabase/auth-ui-svelte": "^0.2.2",
